@@ -1,0 +1,26 @@
+ <div>
+    <label> Indetification: {{student.identification}}</label>
+  </div>
+  <div>
+    <label> Name: {{student.name}}</label>
+  </div>
+  <div>
+    <label> Last Name: {{student.lastname}}</label>
+  </div>
+ <div>
+   <ul>
+     <li *ngFor="let course of courses">
+         <span style="cursor: pointer; color: red" (click)="addList(course)"> {{course.name +' ' + course.content.description}}</span>
+     </li>
+   </ul>
+ </div>
+ <div>
+   <ul>
+     <li *ngFor="let courseSelected of coursesSelected">
+       <span> {{courseSelected}}</span>
+     </li>
+   </ul>
+ </div>
+  <button (click)="save()">
+    Save
+  </button>

@@ -1,0 +1,17 @@
+<form [formGroup]="formStudent">
+  <div>
+    <label> Indetification:</label>
+    <input formControlName="identification">
+  </div>
+  <div>
+    <label> Name:</label>
+    <input formControlName="name">
+  </div>
+  <div>
+    <label> Last Name:</label>
+    <input formControlName="lastname">
+  </div>
+  <button (click)="save()">
+    Save
+  </button>
+</form>

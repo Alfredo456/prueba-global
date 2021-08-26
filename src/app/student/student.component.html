@@ -1,0 +1,21 @@
+<div>
+  <ul>
+    <li *ngFor="let student of students">
+      <a routerLink="/student-enroll/{{student.identification}}">
+        <span> {{student.identification +' ' + student.name + ' '+ student.lastname}}</span>
+        <ul>
+          <li *ngFor="let enrolledCourse of student.enrolledCourses">
+              <span> {{enrolledCourse.name}}</span>
+          </li>
+        </ul>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<button (click)="add()">
+  Add
+</button>
